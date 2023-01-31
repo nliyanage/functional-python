@@ -20,7 +20,14 @@ def evens(n):
     >>> evens(-1)
     []
     '''
+    def testevens(number):
+        if number % 2 == 0:
+            return True 
+        else: 
+            return False 
 
+    output = list(filter(testevens, range(n+1)))
+    return output
 
 def threes(n):
     '''
@@ -37,7 +44,13 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-
+    def testthrees(number):
+        if '3' in str(number): 
+            return True 
+        else:
+            return False 
+    output = list(filter(testthrees, range(n+1)))
+    return output 
 
 def small_words(text):
     '''
@@ -55,7 +68,13 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
-
+    def smallwords(wordinput):
+        if len(wordinput) < 5:
+            return True
+        else:
+            return False
+    output = list(filter(smallwords, text.split()))
+    return output 
 
 def squares(n):
     '''
@@ -71,7 +90,11 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
+    def nsquared(number):
+        return number*number 
 
+    output = list(map(nsquared, range(1, n+1)))
+    return output
 
 def lengths(strings):
     '''
@@ -84,3 +107,10 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
+
+    def lengthstring(inputstring):
+        return len(inputstring) 
+
+    output = list(map(lengthstring, strings))
+    return output 
+
