@@ -63,7 +63,8 @@ def small_words(text):
     input text that are less than 5 characters long.
 
     HINT:
-    Recall that text.split() converts the text variable into a list of words.
+    Recall that text.split() converts 
+    the text variable into a list of words.
 
     >>> small_words('this is a simple test case')
     ['this', 'is', 'a', 'test', 'case']
